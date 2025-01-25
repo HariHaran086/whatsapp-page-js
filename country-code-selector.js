@@ -17,29 +17,14 @@ const iti = window.intlTelInput(input, {
 var button = document.querySelector("#wa-form-sbmt");
 var form = document.querySelector("#wf-form-whatsapp-general");
 
-form.addEventListener('submit', function (event) {
+button.addEventListener("click", function (event) {
   event.preventDefault();
 
   if (!input.value.trim()) {
     alert("Kindly enter your phone number");
   } else if (iti.isValidNumber()) {
     console.log("Phone number is valid");
-    const formData = new FormData(form);
-
-    // Use fetch API to submit the form data
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    })
-      .then(response => {
-        if (response.ok) {
-          console.log('Form submitted successfully!');
-          // Optional: Handle success state here (e.g., show a thank-you message)
-        } else {
-          console.error('Form submission failed.');
-        }
-      })
-      .catch(error => console.error('Error:', error))
+    form.submit();
   } else {
     const errorCode = iti.getValidationError();
     const msg = errorMap[errorCode] || "Invalid number";
