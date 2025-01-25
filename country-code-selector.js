@@ -1,4 +1,5 @@
 const input = document.querySelector("#number-intp");
+const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 const iti = window.intlTelInput(input, {
   initialCountry: "auto",
   geoIpLookup: (callback) => {
