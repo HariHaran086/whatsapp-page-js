@@ -1,5 +1,5 @@
 const input = document.querySelector("#number-intp");
-window.intlTelInput(input, {
+const iti = window.intlTelInput(input, {
   initialCountry: "auto",
   geoIpLookup: (callback) => {
     fetch("https://ipapi.co/json")
