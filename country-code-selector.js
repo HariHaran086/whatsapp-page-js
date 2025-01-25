@@ -16,15 +16,18 @@ const iti = window.intlTelInput(input, {
 
 var button = document.querySelector("#wa-form-sbmt");
 var form = document.querySelector("#wf-form-whatsapp-general");
+var duplicateButton = document.getElementById("dup-but-sf");
 
-button.addEventListener("click", function (event) {
-  event.preventDefault();
+duplicateButton.addEventListener("click", function (event) {
 
   if (!input.value.trim()) {
     alert("Kindly enter your phone number");
   } else if (iti.isValidNumber()) {
     console.log("Phone number is valid");
-    form.submit();
+    const number = iti.getNumber(intlTelInput.utils.numberFormat.E164);
+    input.value = number;
+    console.log("New number submitted");
+    button.click();
   } else {
     const errorCode = iti.getValidationError();
     const msg = errorMap[errorCode] || "Invalid number";
