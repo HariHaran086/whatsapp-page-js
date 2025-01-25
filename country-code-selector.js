@@ -1,11 +1,5 @@
 const input = document.querySelector("#number-intp");
 const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
-
-window.Webflow = window.Webflow || [];
-window.Webflow.push(() => {
-  console.log('Webflow scripts disabled');
-});
-
 const iti = window.intlTelInput(input, {
   initialCountry: "auto",
   geoIpLookup: (callback) => {
