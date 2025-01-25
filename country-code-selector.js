@@ -24,8 +24,8 @@ duplicateButton.addEventListener("click", function (event) {
     alert("Kindly enter your phone number");
   } else if (iti.isValidNumber()) {
     console.log("Phone number is valid");
-    const number = iti.getNumber(intlTelInput.utils.numberFormat.E164);
-    input.value = number;
+    // const number = iti.getNumber(intlTelInput.utils.numberFormat.E164);
+    // input.value = number;
     console.log("New number submitted");
     button.click();
   } else {
