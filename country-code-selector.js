@@ -19,8 +19,6 @@ var form = document.querySelector("#wf-form-whatsapp-general");
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
-  reset();
-
   if (!input.value.trim()) {
     alert("Kindly enter your phone number");
   } else if (iti.isValidNumber()) {
