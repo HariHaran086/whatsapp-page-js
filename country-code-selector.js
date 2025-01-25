@@ -18,20 +18,20 @@ var button = document.querySelector("#wa-form-sbmt");
 var form = document.querySelector("#wf-form-whatsapp-general");
 var duplicateButton = document.getElementById("dup-but-sf");
 
-duplicateButton.addEventListener("click", function (event) {
+// duplicateButton.addEventListener("click", function (event) {
 
-  if (!input.value.trim()) {
-    alert("Kindly enter your phone number");
-  } else if (iti.isValidNumber()) {
-    console.log("Phone number is valid");
-    // const number = iti.getNumber(intlTelInput.utils.numberFormat.E164);
-    // input.value = number;
-    console.log("New number submitted");
-    button.click();
-  } else {
-    const errorCode = iti.getValidationError();
-    const msg = errorMap[errorCode] || "Invalid number";
-    console.log(msg);
-    alert("Kindly enter a valid phone number");
-  }
-});
+//   if (!input.value.trim()) {
+//     alert("Kindly enter your phone number");
+//   } else if (iti.isValidNumber()) {
+//     console.log("Phone number is valid");
+//     const number = iti.getNumber(intlTelInput.utils.numberFormat.E164);
+//     input.value = number;
+//     console.log("New number submitted");
+//     button.click();
+//   } else {
+//     const errorCode = iti.getValidationError();
+//     const msg = errorMap[errorCode] || "Invalid number";
+//     console.log(msg);
+//     alert("Kindly enter a valid phone number");
+//   }
+// });
