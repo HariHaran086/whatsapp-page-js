@@ -1,7 +1,7 @@
 (function () {
  console.log("timer code");
     // Set the deadline in UTC format (7:30 PM IST = 2:00 PM UTC)
-    var deadlineUTC = '2025-02-13T14:00:00Z';
+    var deadlineUTC = '2025-03-13T14:00:00Z';
 
     function pad(num, size) {
         var s = "0" + num;
